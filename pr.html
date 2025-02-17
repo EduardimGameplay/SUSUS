@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>início `do fim`</title>
+    <link rel="stylesheet" href="pr.css">
+    <link rel="shortcut icon" href="Img/dead.png">
+    <script>
+        function carregarResultado() {
+            var sintomaSelecionado = document.getElementById("sintomas").value;
+            var resultadoTexto = "";
+            
+            switch(sintomaSelecionado) {
+                case "Dor de Cabeça":
+                    resultadoTexto = "Error: Já existe outro usuario com este sintoma";
+                    break;
+                case "Depressão":
+                    resultadoTexto = "Câncer";
+                    break;
+                case "Virose":
+                    resultadoTexto = "Virose";
+                    break;
+                case "Dor de Garganta":
+                    resultadoTexto = "😏";
+                    break;    
+                 case "Olho Vermelho":
+                    resultadoTexto = "Maconheiro";
+                    break;
+                case "Desânimo com o trabalho":
+                    resultadoTexto = "Petista";
+                    break;
+                case "Ajuda Com Traumas":
+                    resultadoTexto = "Psicólogo do SUS é uma bosta nem tenta";
+                    break;
+                 case "Ansiedade":
+                    resultadoTexto = "Desinstala esse tiktok ae pra eu ver uma coisa";
+                    break;
+                case "Acidente de Trabalho":
+                    resultadoTexto = "Advocacia mais proxima em: 2,4km";
+                    break;
+                case "Ressaca":
+                    resultadoTexto = "Atestado R$84,90";
+                    break;
+                case "Vício em Drogas":
+                    resultadoTexto = "top";
+                    break;
+                case "Outros...":
+                    resultadoTexto = "O usuario ''20comer70correr'' ja possui esse sintoma";
+                    break;
+                default:
+                    resultadoTexto = "Nenhum resultado encontrado";
+            }
+            
+            document.getElementById("resultado").innerText = "= " + resultadoTexto;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Selecione um Sintoma</h2>
+        <select id="sintomas">
+            <option value="Dor de Cabeça">Dor de Cabeça</option>
+            <option value="Depressão">Depressão</option>
+            <option value="Virose">Virose</option>
+            <option value="Dor de Garganta">Dor de Garganta</option>
+            <option value="Olho Vermelho">Olho Vermelho</option>
+            <option value="Desânimo com o trabalho">Desânimo com o trabalho</option>
+            <option value="Ajuda Com Traumas">Ajuda Com Traumas</option>
+            <option value="Ansiedade">Ansiedade</option>
+            <option value="Acidente de Trabalho">Acidente de Trabalho</option>
+            <option value="Ressaca">Ressaca</option>
+            <option value="Vício em Drogas">Vício em Drogas</option>
+            <option value="Outros...">Outros...</option>
+        </select>
+        <button onclick="carregarResultado()">Carregar</button>
+        <p id="resultado"></p>
+    </div>
+</body>
+</html>
